@@ -6,15 +6,15 @@ import './styles.css'
 
 const PROFILE = {
   name: 'Davina Lydia Pinto',
-  role: 'Software Developer · .NET | C# | Automation',
+  role: 'Software Developer : C# | .Net | UI Path Automation',
   blurb:
     'Full‑stack developer focused on .NET, automation (UiPath), and data‑driven apps. I build reliable interfaces and robust back‑ends.',
   email: 'davinapinto@gmail.com',
   phone: '0430 015 890',
   location: 'Canberra, Australia',
   github: 'https://github.com/daylinda',
-  linkedin: 'https://www.linkedin.com/in/davina-lydia-pinto',
-  resumeUrl: '/cv.pdf', // put cv.pdf in /public
+  linkedin: 'https://www.linkedin.com/in/davina-lydia-pinto-65166514b/',
+  resumeUrl: 'assets/Davina_Resume.pdf', // put cv.pdf in /public
 }
 
 type Project = {
@@ -62,17 +62,17 @@ type Experience = {
 const EXPERIENCE: Experience[] = [
   {
     org: 'Tailored Accounts',
-    role: 'Software Developer (Part‑time)',
-    period: 'Nov 2024 – Present · Canberra, Australia',
+    role: 'Software Developer',
+    period: 'Nov 2024 – Present',
     bullets: [
       'Built automation workflows and internal tools; added monitoring and logging.',
       'Delivered features end‑to‑end across API, database, and UI.',
     ],
   },
   {
-    org: 'BNP Paribas (prior role)',
-    role: '.NET Developer',
-    period: '2 yrs 11 mos (overseas)',
+    org: 'BNP Paribas',
+    role: ' Software Engineer',
+    period: 'August 2020 - June 2023',
     bullets: [
       'Developed WPF apps and REST integrations for financial operations.',
       'Optimised SQL queries and improved reliability of batch jobs.',
