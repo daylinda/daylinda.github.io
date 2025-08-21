@@ -118,99 +118,33 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="container py-4">
       {/* Header */}
-      <header className="header">
-        <div className="container header-inner">
-          <div className="brand">{PROFILE.name}</div>
-          <button id="nav-toggle" className="nav-toggle" aria-expanded="false" aria-controls="nav" onClick={toggleNav}>
-            <span className="sr-only">Toggle navigation</span> ☰
-          </button>
-          <nav id="nav" className="nav" aria-label="Primary">
-            <ul>
-              {['#projects', '#skills', '#experience', '#contact'].map((href, i) => (
-                <li key={href}>
-                  <a href={href} ref={el => { if (el) navLinksRef.current[i] = el }} onClick={scrollToId(href)}>
-                    {href.replace('#','')}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+      <header className="text-center mb-5">
+        <h1 className="fw-bold">{PROFILE.name}</h1>
+        <p className="text-muted">{PROFILE.role}</p>
+        <nav className="d-flex justify-content-center gap-3">
+          <a href="#projects" className="text-decoration-none">Projects</a>
+          <a href="#skills" className="text-decoration-none">Skills</a>
+          <a href="#experience" className="text-decoration-none">Experience</a>
+          <a href="#contact" className="text-decoration-none">Contact</a>
+        </nav>
       </header>
 
+
       {/* Hero */}
-      <section className="hero container">
-        <h1 className="headline">{PROFILE.role}</h1>
-        <p className="tagline">{PROFILE.blurb}</p>
-        <div className="cta">
-          <a className="btn primary" href="#projects" onClick={scrollToId('#projects')}>View Projects</a>
-          <a className="btn" href={PROFILE.github} target="_blank" rel="noreferrer">GitHub</a>
-          <a className="btn" href={PROFILE.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-          <a className="btn" href={PROFILE.resumeUrl} target="_blank" rel="noreferrer">Download CV</a>
+      <section className="text-center mb-5">
+        <h2>About Me</h2>
+        <p className="lead">{PROFILE.blurb}</p>
+        <div className="d-flex justify-content-center gap-3">
+          <a className="btn btn-outline-primary" href={PROFILE.github} target="_blank">GitHub</a>
+          <a className="btn btn-outline-info" href={PROFILE.linkedin} target="_blank">LinkedIn</a>
+          <a className="btn btn-primary" href={PROFILE.resumeUrl} target="_blank">Download CV</a>
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="section-alt" ref={el => { if (el) sectionsRef.current[0] = el }}>
-        <div className="container">
-          <h2>Projects</h2>
-          <div className="grid">
-            {PROJECTS.map(p => (
-              <article className="card" key={p.title}>
-                <h3>{p.title}</h3>
-                <p>{p.summary}</p>
-                <ul className="tags">{p.tags.map(t => <li key={t}>{t}</li>)}</ul>
-                {p.link && <a className="card-link" href={p.link} target="_blank" rel="noreferrer">View repo/demo →</a>}
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Skills */}
-      <section id="skills" className="section" ref={el => { if (el) sectionsRef.current[1] = el }}>
-        <div className="container">
-          <h2>Skills</h2>
-          <ul className="pills">{SKILLS.map(s => <li key={s}>{s}</li>)}</ul>
-        </div>
-      </section>
-
-      {/* Experience */}
-      <section id="experience" className="section-alt" ref={el => { if (el) sectionsRef.current[2] = el }}>
-        <div className="container">
-          <h2>Experience</h2>
-          <div className="timeline">
-            {EXPERIENCE.map(e => (
-              <div className="item" key={e.org}>
-                <h3>{e.role} · {e.org}</h3>
-                <div className="meta">{e.period}</div>
-                <ul>
-                  {e.bullets.map((b, i) => <li key={i}>{b}</li>)}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="section" ref={el => { if (el) sectionsRef.current[3] = el }}>
-        <div className="container">
-          <h2>Contact</h2>
-          <p>Based in {PROFILE.location}. I’m open to roles in .NET development, automation, or full‑stack engineering.</p>
-          <div className="contacts">
-            <a className="contact" href={`mailto:${PROFILE.email}`}>📧 {PROFILE.email}</a>
-            <span className="contact">📱 {PROFILE.phone}</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">© <span id="year"></span> {PROFILE.name}. All rights reserved.</div>
-      </footer>
+      {/* Add Projects, Skills, Experience, Contact sections here with Bootstrap cards, grids, and lists */}
     </div>
   )
 }
