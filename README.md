@@ -12,7 +12,7 @@
 - 💼 Software Developer
 - 🎯 Experienced in building web, desktop, and automation solutions for finance and business domains.  
 - 📍 Based in Canberra, Australia.  
-- 🌱 Currently exploring React, bootstrap  through this project
+- 🌱 Currently exploring React, bootstrap, github actions  through this project
 
 
 
@@ -21,10 +21,10 @@ If you’d like to run this portfolio locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/daylinda/portfolio.git
+git clone https://github.com/daylinda/daylinda.github.io
 
 # Navigate to the project folder
-cd portfolio
+cd davina-portfolio
 
 # Install dependencies
 npm install
