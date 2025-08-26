@@ -10,14 +10,16 @@ import Timeline from './components/Timeline'
 import "primereact/resources/themes/lara-light-blue/theme.css";  // pick a theme
 import "primereact/resources/primereact.min.css";                 // core styles
 import "primeicons/primeicons.css";                              // icons
+import NavBar from './components/MyNavBar'
 
 
 
 function App() {
   return (
     <div className="bg-dark text-light d-flex flex-column align-items-center">
+      <NavBar/>
       <Hero />     
-      <Experience /> 
+      {/* <Experience />  */}
       <Timeline />
       
       <Projects />     

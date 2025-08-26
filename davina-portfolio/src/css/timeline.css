@@ -1,0 +1,67 @@
+/* --- Timeline grid --- */
+.tl {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 36px minmax(0,1fr); /* left | line | right */
+  row-gap: 32px;
+  margin: 2rem 0;
+}
+
+/* continuous vertical line */
+.tl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #4f2b84;
+  transform: translateX(-50%);
+}
+
+/* make each row use the grid columns */
+.tl-row { display: contents; }
+
+/* columns */
+.tl-col { display: flex; }
+.tl-col.left  { grid-column: 1; justify-content: flex-end; text-align: right; }
+.tl-col.right { grid-column: 3; justify-content: flex-start; text-align: left; }
+
+/* center (dot) column */
+.tl-mid {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* align dot with card header */
+}
+
+/* dot */
+.tl-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #5f15c7; border: 3px solid #fff; box-shadow: 0 0 0 2px #4f2b84;
+  margin-top: 14px;          /* tweak to align with card title */
+  z-index: 2;
+}
+
+/* compact card */
+.tl-card {
+  max-width: 300px;          /* keep slim */
+  margin: 0;
+}
+
+/* optional tiny pointer from card to line */
+.tl-card.left::after,
+.tl-card.right::after {
+  content: "";
+  position: absolute; top: 18px; border-width: 8px; border-style: solid;
+}
+.tl-card.left::after  { right: -10px; border-color: transparent transparent transparent #fff; }
+.tl-card.right::after { left:  -10px; border-color: transparent #fff transparent transparent; }
+
+/* Mobile: single column with line on the left */
+@media (max-width: 768px) {
+  .tl { grid-template-columns: 24px 1fr; }
+  .tl-col.left, .tl-col.right { grid-column: 2; justify-content: flex-start; text-align: left; }
+  .tl-mid { grid-column: 1; align-items: flex-start; }
+  .tl-dot { margin-top: 12px; }
+}

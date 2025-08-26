@@ -78,7 +78,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="container py-5">
+    <section  id="projects" className="container py-5">
       <h2 className="text-center mb-4">Projects</h2>
       <Slider {...settings}>
         {projects.map((p, idx) => (
