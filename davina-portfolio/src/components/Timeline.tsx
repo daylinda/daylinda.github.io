@@ -1,68 +1,87 @@
+// src/components/Timeline.tsx
 import React from "react";
-import { MDBContainer, MDBCard, MDBCardBody } from "mdb-react-ui-kit";
+import { Timeline as PrimeTimeline } from "primereact/timeline";
+import "primereact/resources/themes/lara-light-teal/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
-type Item = {
+export type TLItem = {
+  id: string;
   title: string;
-  place: string;
-  date: string;
-  description: string;
-  type: "education" | "experience";
+  subtitle?: string;
+  period?: string;
+  description?: string;
+  icon?: string;   // e.g., "pi pi-briefcase"
+  color?: string;  // dot color
 };
 
-const timelineData: Item[] = [
-  { title: "Bachelors of Computer Engineering", place: "Mumbai University", date: "2016 – 2020",
-    description: "Core computer engineering, programming, and systems design.", type: "education" },
-  { title: "Software Developer", place: "BNP Paribas | India", date: "2020 – 2023",
-    description: "Modernised CRM apps, migrated WCF to REST APIs, and improved performance.", type: "experience" },
-  { title: "Masters of Computing", place: "Australian National University", date: "2023 – 2025",
-    description: "Focus on computing, software engineering, and data-driven applications.", type: "education" },
-  { title: "Software Developer", place: "Tailored Accounts | Australia", date: "2024 – Present",
-    description: "Designing .NET apps, UiPath automations, and leading web redesigns.", type: "experience" },
+type Props = {
+  items?: TLItem[];                         // optional; falls back to defaultTimeline
+  align?: "top" | "bottom" | "alternate";
+  horizontal?: boolean;                     // toggle layout without editing file
+};
+
+/** Keep local data in the same file without clashing with props */
+export const defaultTimeline: TLItem[] = [
+  { id: "bsc",   title: "Bachelor of Computer Engineering", subtitle: "Mumbai University", period: "2016–2020", icon: "pi pi-book",           color: "#7C4DFF" },
+  { id: "bnp",   title: "Software Engineer", subtitle: "BNP Paribas", period: "2020–2023", icon: "pi pi-briefcase",           color: "#4dffe4ff" },
+  { id: "intern",title: "Automation Intern",                subtitle: "Tailored Accounts", period: "2024",       icon: "pi pi-cog",            color: "#26C6DA" },
+  { id: "mcomp", title: "Master of Computing",              subtitle: "ANU",               period: "2023–2025",  icon: "pi pi-graduation-cap", color: "#66BB6A" },
+  { id: "job",   title: "Software Dev (Current)",           subtitle: "Tailored Accounts", period: "2024–Now",   icon: "pi pi-briefcase",      color: "#FF7043" },
 ];
 
-export default function Timeline() {
-  return (
-    <MDBContainer fluid className="py-5">
-      <h3 className="text-center fw-bold mb-4">Education & Experience</h3>
+export default function Timeline({
+  items = defaultTimeline,
+  align = "alternate",
+  horizontal = true,
+}: Props) {
+  const marker = (item: TLItem) => (
+    <span
+      className="custom-marker"
+      style={{ background: item.color ?? "#6f42c1" }}
+      aria-hidden
+    >
+      {item.icon && <i className={item.icon} />}
+    </span>
+  );
 
-      <div className="tl">
-        {[...timelineData].reverse().map((item, i) => (
-          <div className="tl-row" key={i}>
-            {/* left column (education) */}
-            <div className="tl-col left">
-              {item.type === "education" && (
-                <MDBCard className="tl-card left shadow-sm">
-                  <MDBCardBody className="p-3">
-                    <h6 className="fw-bold mb-1">{item.title}</h6>
-                    <div className="text-muted small mb-1">{item.date}</div>
-                    <div className="small fw-semibold mb-1">{item.place}</div>
-                    <div className="small mb-0">{item.description}</div>
-                  </MDBCardBody>
-                </MDBCard>
-              )}
-            </div>
-
-            {/* middle column (dot) */}
-            <div className="tl-mid">
-              <span className="tl-dot" />
-            </div>
-
-            {/* right column (experience) */}
-            <div className="tl-col right">
-              {item.type === "experience" && (
-                <MDBCard className="tl-card right shadow-sm">
-                  <MDBCardBody className="p-3">
-                    <h6 className="fw-bold mb-1">{item.title}</h6>
-                    <div className="text-muted small mb-1">{item.date}</div>
-                    <div className="small fw-semibold mb-1">{item.place}</div>
-                    <div className="small mb-0">{item.description}</div>
-                  </MDBCardBody>
-                </MDBCard>
-              )}
-            </div>
-          </div>
-        ))}
+  const content = (item: TLItem) => (
+    <div className="card bg-dark text-light shadow-sm tl-card">
+      <div className="card-body">
+        <div className="d-flex justify-content-between align-items-center mb-1">
+          <h6 className="mb-0">{item.title}</h6>
+          {item.period && <small className="text-secondary">{item.period}</small>}
+        </div>
+        {item.subtitle && <div className="text-secondary small mb-2">{item.subtitle}</div>}
+        {item.description && <p className="mb-0">{item.description}</p>}
       </div>
-    </MDBContainer>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Inline CSS tweaks so you don’t need a separate stylesheet */}
+      <style>{`
+        .custom-marker {
+          width: 14px; height: 14px; border-radius: 999px;
+          display: grid; place-items: center; color: #fff; font-size: .55rem;
+          box-shadow: 0 0 0 3px #111;
+        }
+        .p-timeline-event-connector { background: rgba(255,255,255,.15); height: 2px; }
+        .p-timeline.p-timeline-horizontal { overflow-x: auto; padding-bottom: .5rem; scroll-snap-type: x mandatory; }
+        .p-timeline.p-timeline-horizontal .p-timeline-event { scroll-snap-align: start; min-width: 220px; }
+        .p-timeline.p-timeline-horizontal .p-timeline-event-content { margin-top: .5rem; }
+        .p-timeline.p-timeline-horizontal.p-timeline-bottom .p-timeline-event-content { margin-bottom: .5rem; }
+        @media (prefers-reduced-motion: reduce) { .tl-card { transition: none !important; } }
+      `}</style>
+
+      <PrimeTimeline
+        value={items}
+        layout={horizontal ? "horizontal" : undefined}
+        align={align}
+        marker={marker}
+        content={content}
+      />
+    </>
   );
 }
