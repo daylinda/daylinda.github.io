@@ -30,4 +30,4 @@ cd davina-portfolio
 npm install
 
 # Run locally
-npm start
+npm run 
