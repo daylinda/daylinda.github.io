@@ -17,12 +17,12 @@ import NavBar from './components/MyNavBar'
 function App() {
   return (
     <div className="bg-dark text-light d-flex flex-column align-items-center">
-      <NavBar/>
+      {/* <NavBar/> */}
       <Hero />     
       {/* <Experience />  */}
-      <Timeline />
+      {/* <Timeline /> */}
       
-      <Projects />     
+      {/* <Projects />      */}
      
     </div>
   )
