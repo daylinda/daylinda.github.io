@@ -12,6 +12,6 @@
     "jsx": "react-jsx",
     "strict": true
   },
-  "include": ["src"],
+  "include": ["src","vite-env.d.ts"],
   "typeRoots": ["./src/types", "./node_modules/@types"]
 }

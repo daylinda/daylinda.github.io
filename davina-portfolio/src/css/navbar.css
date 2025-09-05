@@ -1,0 +1,17 @@
+#navbarBrand{
+    direction: unset;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   display: flex;
+   width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+} 
+
+
+
+#navbarBrand:hover {
+  transform: scale(1.3); /* grows by 30% */
+}
+
