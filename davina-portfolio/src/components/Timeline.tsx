@@ -2,7 +2,7 @@ import GradientText from "./animations/GradientText";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
 import { motion } from "framer-motion";
 import "../css/timeline.css";
-import Stepper, { Step } from "./animations/Stepper";
+// import Stepper, { Step } from "./animations/Stepper";
 
 const Timeline = () => (
   <section
