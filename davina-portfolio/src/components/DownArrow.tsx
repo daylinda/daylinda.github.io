@@ -11,10 +11,11 @@ export default function DownArrow({ onClick }: DownArrowProps) {
       style={{
         position: "absolute",
         bottom: "20px",
-        left: "90%",
+        left: "90%", // centered instead of 90%
         transform: "translateX(-50%)",
         color: "cyan",
-        cursor: "grab",
+        cursor: "pointer", // use pointer instead of grab
+        zIndex: 2,
       }}
       animate={{ y: [0, -10, 0] }}
       transition={{ repeat: Infinity, duration: 1.5 }}

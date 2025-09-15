@@ -10,6 +10,8 @@ import "primereact/resources/primereact.min.css";                 // core styles
 import "primeicons/primeicons.css";                              // icons
 import NavBar from './components/MyNavBar';
 import About from './components/About';
+import Projects from './components/Projects';
+import Timeline from './components/Timeline';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <Hero /> 
       <NavBar/>  
       <About/>
+      <Projects/>
+      <Timeline/>
         
     </div>
   )
