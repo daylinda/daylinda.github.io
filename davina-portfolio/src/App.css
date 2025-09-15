@@ -7,10 +7,6 @@ body {
   color: #f1f1f1;
 }
 
-/* General section styling */
-section {
-  margin-bottom: 10px;
-}
 
 /* Headings */
 h2 {
@@ -22,4 +18,5 @@ h2 {
 section {
   scroll-margin-top: 80px; /* height of your fixed navbar */
   scroll-behavior: smooth; /* optional: smooth scrolling */
+  margin-bottom: 5px;
 }

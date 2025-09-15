@@ -16,13 +16,13 @@ import Timeline from './components/Timeline';
 
 function App() {
   return (
-    <div className="bg-dark text-light d-flex flex-column align-items-center">
+    <div className="bg-dark text-light d-flex flex-column align-items-center justify-content-center">
       
       <Hero /> 
       <NavBar/>  
       <About/>
-      <Projects/>
       <Timeline/>
+      <Projects/>
         
     </div>
   )

@@ -5,7 +5,8 @@ import "../css/navbar.css";
 
 
 const MyNavBar = () => (
-  <Navbar bg="dark" className="container-sm py-3" variant="dark" expand="lg" sticky="top">
+  
+  <Navbar bg="dark" className="container-fluid py-3" variant="dark" expand="lg" sticky="top">
     <Container>
       <Navbar.Brand href="#hero">
         <Container id="navbarBrand">
@@ -57,6 +58,7 @@ const MyNavBar = () => (
       </Navbar.Collapse>
     </Container>
   </Navbar>
+
 );
 
 export default MyNavBar;

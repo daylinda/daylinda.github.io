@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { useState } from "react";
 import ResumeViewer from "./ResumeViewer";
-import Orb from "./Orb";
+import Orb from "./animations/Orb";
 import DownArrow from "./DownArrow";
 
 const RESUME_URL = new URL("../assets/Davina_Resume.pdf", import.meta.url).href;

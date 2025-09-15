@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle, Vec3 } from 'ogl';
 
-import '../css/orb.css';
 
+import '../../css/animations/orb.css';
 interface OrbProps {
   hue?: number;
   hoverIntensity?: number;
