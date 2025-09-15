@@ -1,4 +1,6 @@
 import GradientText from "./animations/GradientText";
+import React from "react";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const Projects = () => (
@@ -17,7 +19,7 @@ const Projects = () => (
       className="custom-class mb-4"
     >
       <h2 className="fw-bold mb-4 ">
-        Some of My Projects! <i class="bi bi-emoji-sunglasses"></i>
+        Some of My Projects! <i className="bi bi-emoji-sunglasses"></i>
       </h2>
     </GradientText>
     </section>

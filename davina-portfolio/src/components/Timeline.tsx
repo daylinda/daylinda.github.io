@@ -25,8 +25,8 @@ const Timeline = () => (
       className="custom-class mb-4"
     >
       <h2 className="fw-bold mb-4 ">
-        My Journey! It takes a while <i class="bi bi-emoji-wink"></i>{" "}
-        <i class="bi bi-emoji-grimace"></i>{" "}
+        My Journey! It takes a while <i className="bi bi-emoji-wink"></i>{" "}
+        <i className="bi bi-emoji-grimace"></i>{" "}
       </h2>
     </GradientText>
 
