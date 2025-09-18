@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import { GridHelper } from "ogl";
 import ProfilePic from "../assets/profile.jpeg";
 import TextType from "./animations/TextType";
@@ -14,10 +15,10 @@ export default function About() {
       <div className="container">
         <div className="row flex-column flex-md-row align-items-center">
           {/* Profile Picture */}
-          <div className="col-12 col-lg-4 text-center mb-4 mb-lg-0">
+          <div className="col-12 col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
             <motion.div
               className="rounded-circle mx-auto shadow-lg"
-              style={{ width: "400px", height: "400px", overflow: "hidden" }}
+              style={{ width: "clamp(100px, 400px, 450px)"  , height: "clamp(100px, 400px, 450px)" , overflow: "hidden" }}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -45,8 +46,10 @@ export default function About() {
             </motion.div>
           </div>
 
+          
+
           {/* About Content */}
-          <div className="col-12 col-lg-8" id="about-text">
+          <div className="col-12 col-md-6" id="about-text">
             <h2 className="fw-bold mb-4">About Me</h2>
             <p className="lead">
               Hey, my name is <span className="fw-semibold">Davina</span>.{" "}
