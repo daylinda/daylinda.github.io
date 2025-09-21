@@ -53,7 +53,7 @@ export default function About() {
             <h2 className="fw-bold mb-4">About Me</h2>
             <p className="lead">
               Hey, my name is <span className="fw-semibold">Davina</span>.{" "}
-              <br></br>
+              
               <br></br>
               <TextType
                 text={[

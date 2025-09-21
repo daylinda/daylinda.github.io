@@ -1,0 +1,20 @@
+/* Keep each page centred and constrain width/height properly */
+.react-pdf__Page {
+  margin: 0 auto 12px; /* centre + small gap between pages */
+  width: 100%;
+}
+
+/* Prevent any canvas from overflowing horizontally */
+.react-pdf__Page canvas,
+.react-pdf__Page svg {
+  display: block;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  box-shadow: none !important; /* avoid shadow adding extra visual width */
+}
+
+/* Optional: remove any horizontal scroll from the modal itself */
+.pdf-scroll {
+  overscroll-behavior: contain;
+}

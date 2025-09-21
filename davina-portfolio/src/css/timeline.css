@@ -1,0 +1,44 @@
+.timeline-content {
+    border-radius:10px !important;
+    border: solid 1px rgb(143, 125, 182);
+    width: 80%;
+    box-shadow: 0 4px 6px rgb(143, 125, 182);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card{
+    width: 18rem;
+    background-color: rgb(186, 176, 207);;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    
+    box-shadow: 0 4px 8px rgb(77, 60, 113);
+}
+
+
+.timeline-step {
+  display: flex;
+  justify-content: flex-start; /* default left */
+}
+
+.timeline-step.right {
+  justify-content: flex-end; /* push to the right */
+}
+
+.timeline-content {
+  max-width: wrap-content;
+}
+
+/* Responsive: stack everything centered on small screens */
+@media (max-width: 768px) {
+  .timeline-step,
+  .timeline-step.right {
+    justify-content: center;
+  }
+  .timeline-content {
+    max-width: 100%;
+  }
+}

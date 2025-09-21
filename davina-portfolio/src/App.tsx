@@ -11,17 +11,19 @@ import "primeicons/primeicons.css";                              // icons
 import NavBar from './components/MyNavBar';
 import About from './components/About';
 import Projects from './components/Projects';
-import Timeline from './components/Timeline';
+import Journey from './components/Timeline';
+
 
 
 function App() {
   return (
     <div className="bg-dark text-light d-flex flex-column align-items-center justify-content-center">
       
+     
       <Hero /> 
       <NavBar/>  
       <About/>
-      <Timeline/>
+      <Journey/>
       <Projects/>
         
     </div>
