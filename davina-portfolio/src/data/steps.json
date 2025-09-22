@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Bachelor of Computer Engineering",
+    "subtitle": "Mumbai University",
+    "period": "2016–2020",
+    "description": "I completed my Bachelor of Computer Engineering, where I built my foundation across both hardware and software, gaining a strong grasp of how systems work end-to-end. Early on, I explored areas like AI and Machine Learning, but I discovered a stronger passion for designing and building front-end applications. This shift shaped my career direction, as I realised I enjoyed creating user-focused solutions that bring ideas to life.",
+    "side": "left"
+  },
+  {
+    "id": 2,
+    "title": "Software Developer",
+    "subtitle": "BNP Paribas",
+    "period": "2020–2023",
+    "description": "I worked as a .NET Software Engineer focused on modernising enterprise CRM systems. I migrated legacy modules from WCF to REST APIs, improving performance, scalability, and integration with downstream systems. My role involved building WPF applications using MVVM, optimising SQL queries for efficiency, and integrating Siebel CRM data through XML and API workflows. Collaborating closely with business analysts in agile sprints, I ensured technical solutions aligned with business needs while supporting CI/CD pipelines with TeamCity, Jenkins, and Git for reliable delivery.",
+    "side": "right"
+  },
+  {
+    "id": 3,
+    "title": "Masters of Computing",
+    "subtitle": "Australian National University",
+    "period": "2023–2025",
+    "description": "Built advanced expertise in software development, automation, data mining, and human–computer interaction. Completed projects in AI-driven learning platforms, tax automation bots, and historical data mining. Developed strong research and problem-solving skills while balancing academic work with part-time industry experience.",
+    "side": "left"
+  },
+  {
+    "id": 4,
+    "title": "Retail Assistant",
+    "subtitle": "ShaverShop",
+    "period": "2023–Present",
+    "description": "I worked part-time as a Retail Assistant while completing my studies. The role involved delivering customer service, managing sales, and maintaining store presentation in a busy retail environment. It strengthened my communication, teamwork, and adaptability — qualities highly valued in the Australian workplace — while teaching me to balance professional, academic, and personal commitments effectively.",
+    "side": "right"
+  },
+  {
+    "id": 5,
+    "title": "Tutoring",
+    "subtitle": "Australian National University",
+    "period": "2023–Present",
+    "description": "As a Tutor at ANU, I supported students, guiding them through programming and software engineering concepts. Having recently been in their position myself, I focused on breaking down complex topics into practical steps and sharing insights from my own industry experience. Tutoring was not just about teaching — it was about helping others like me gain confidence, avoid the struggles I faced, and see how their learning connects to real-world software development.",
+    "side": "left"
+  },
+  {
+    "id": 6,
+    "title": "Software Developer",
+    "subtitle": "Tailored Accounts",
+    "period": "2024–Present",
+    "description": "I began at Tailored Accounts in 2024 as an Automation Intern, where I designed a proof-of-concept tax bot using UiPath to streamline individual returns. Recognising my initiative, the team brought me on as a Software Developer, where I expanded into automation and internal systems — building workflows, integrating .NET/Node.js apps with Xero and Google Cloud, and strengthening IT security processes. This journey from intern to developer reflects my growth in both technical depth and business impact, moving from experimental projects to delivering core systems the company relies on.",
+    "side": "right"
+  }
+]

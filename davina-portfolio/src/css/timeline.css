@@ -1,12 +1,19 @@
 .timeline-content {
     border-radius:10px !important;
-    border: solid 1px rgb(143, 125, 182);
+    border: solid 1px rgb(126, 70, 249);
     width: 80%;
-    box-shadow: 0 4px 6px rgb(143, 125, 182);
+    box-shadow: 0 4px 6px rgb(82, 44, 165);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.col{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+}
+
 .card{
+    height: 100%;
     width: 100%;
     background-color: rgb(186, 176, 207);;
     text-align: center;
@@ -16,6 +23,12 @@
 .card:hover {
     
     box-shadow: 0 4px 8px rgb(77, 60, 113);
+}
+
+.card-body {
+    
+    text-align: center;
+    vertical-align: middle;
 }
 
 
@@ -32,6 +45,8 @@
   max-width: wrap-content;
 }
 
+
+
 /* Responsive: stack everything centered on small screens */
 @media (max-width: 768px) {
   .timeline-step,
@@ -41,4 +56,5 @@
   .timeline-content {
     max-width: 100%;
   }
+
 }

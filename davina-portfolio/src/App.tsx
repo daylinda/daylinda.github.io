@@ -24,7 +24,7 @@ function App() {
       <NavBar/>  
       <About/>
       <Journey/>
-      <Projects/>
+      {/* <Projects/> */}
         
     </div>
   )

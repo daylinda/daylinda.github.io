@@ -40,8 +40,13 @@ export default function Hero() {
       >
         <h1 className="display-4 fw-bold text-white">Davina Lydia Pinto</h1>
         <p className="lead text-light">
-          Software Developer · C# | .NET | UiPath Automation
+          Software Engineer
+          <br />
+          Web & Desktop Applications Developer
+          <br/>
+          Automations Designer
         </p>
+       
         <button
           type="button"
           className="btn btn-outline-light m-2"
