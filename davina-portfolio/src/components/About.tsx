@@ -6,6 +6,7 @@ import TextType from "./animations/TextType";
 import LightRays from "./animations/LightRays";
 import "../css/about.css";
 
+
 export default function About() {
   return (
     <section
@@ -109,7 +110,6 @@ export default function About() {
       </div>
 
       
-
     </section>
     
   );

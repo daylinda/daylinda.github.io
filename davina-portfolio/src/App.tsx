@@ -11,6 +11,7 @@ import "primeicons/primeicons.css";                              // icons
 import NavBar from './components/MyNavBar';
 import About from './components/About';
 import Projects from './components/Projects';
+import Skills from './components/Skills';
 import Journey from './components/Timeline';
 
 
@@ -23,8 +24,12 @@ function App() {
       <Hero /> 
       <NavBar/>  
       <About/>
+      <Skills/>
+       <Projects/>
       <Journey/>
-      {/* <Projects/> */}
+     
+
+      
         
     </div>
   )

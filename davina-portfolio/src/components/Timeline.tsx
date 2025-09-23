@@ -17,7 +17,7 @@ type Step = {
 export default function Journey() {
   return (
     <section id="timeline" className="container py-5">
-      <div className="text-center mb-5">
+      <div className="text-center mb-5 py-3">
         <h2 className="mb-3 text-4xl font-bold">
           <GradientText
             colors={[
@@ -39,7 +39,7 @@ export default function Journey() {
           <MdOutlineEmojiEmotions className="inline text-2xl mb-1" />
         </h4>
       </div>
-      <div className="container mb-5 align-items-center">
+      <div className="container align-items-center">
         {steps.map((step) => (
           <motion.div
             key={step.id}
@@ -47,8 +47,8 @@ export default function Journey() {
             initial={{ opacity: 0, x: step.side === "left" ? -100 : 100 }}
             exit={step.side}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: step.id * 0.1 }}
-            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: step.id * 0.01 }}
+            viewport={{ once: false, amount: 0.2 }}
             data-aos={step.side === "left" ? "fade-right" : "fade-left"}
           >
             <div className="timeline-content shadow-sm p-2 rounded">
