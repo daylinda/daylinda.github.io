@@ -1,0 +1,12 @@
+{
+    "include": [
+        "BudgetTracker",
+         "DataMining_PrisonerData", 
+         "ANU2023_Mino_Game",
+         "StudySearch",
+         "JourneyThroughFood",
+         "soundOfMusic",
+         "GroceryPrice-Comparer",
+         "RPA-ApplicationProcess"
+        ]
+}

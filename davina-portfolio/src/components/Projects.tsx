@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Carousel } from "react-bootstrap";
-import excludeData from "../data/exclude.json";
+import includeData from "../data/include.json";
 import "../css/projects.css";
 
 type Repo = {
@@ -15,7 +15,7 @@ type Repo = {
 
 const Projects = () => {
   const [repos, setRepos] = useState<Repo[]>([]);
-  const excludeList: string[] = excludeData.exclude;
+  const includeList: string[] = includeData.include;
 
   useEffect(() => {
     fetch(
@@ -24,14 +24,14 @@ const Projects = () => {
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((repo: Repo) => {
-          const isExcluded = excludeList.includes(repo.name);
-          console.log(repo.name, "excluded?", isExcluded);
-          return !isExcluded && !repo.fork;
+          const isIncluded = includeList.includes(repo.name);
+          console.log(repo.name, "included?", isIncluded);
+          return isIncluded && !repo.fork;
         });
         setRepos(filtered);
       })
       .catch((err) => console.error("GitHub fetch error:", err));
-  }, [excludeList]);
+  }, [includeList]);
 
   // ✅ Build slides where each one is offset by 1
   const buildSlides = (arr: Repo[], size: number) => {
@@ -49,17 +49,14 @@ const Projects = () => {
       <div className="container" style={{height: '100vh'}}>
         <div className="row">
           <div className="col">
-            
+            <h2 className="section-title text-center mb-4">Projects</h2>
+          </div>
+          <div className="col text-center mb-4">
+            Coming soon...
           </div>
 
-          <div className="col">
-            
-          </div>
-        </div>
-
-        {/* <h2 className="fw-bold mb-4">Some of My Projects! 😎</h2>
-
-        {repos.length > 0 && (
+          {/* <div className="col">
+            {repos.length > 0 && (
           <Carousel
             indicators
             controls
@@ -110,7 +107,13 @@ const Projects = () => {
               </Carousel.Item>
             ))}
           </Carousel>
-        )} */}
+        )}
+            
+          </div> */}
+        </div>
+
+        
+        
       </div>
     </section>
   );
