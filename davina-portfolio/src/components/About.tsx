@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { GridHelper } from "ogl";
-import ProfilePic from "../assets/Avatar_Davina.png";
+import ProfilePic from "../assets/Avatar_1.png";
 import TextType from "./animations/TextType";
 import LightRays from "./animations/LightRays";
 import "../css/about.css";
