@@ -42,18 +42,7 @@ const MyNavBar = () => (
           >
             Skills
           </Link>
-          <Link
-            to="timeline"
-            className="nav-link"
-            smooth
-            offset={-80}
-            duration={500}
-            spy
-            isDynamic
-            activeClass="active-link"
-          >
-            Journey
-          </Link>
+          
           <Link
             to="projects"
             className="nav-link"
@@ -65,6 +54,18 @@ const MyNavBar = () => (
             activeClass="active-link"
           >
             Projects
+          </Link>
+          <Link
+            to="timeline"
+            className="nav-link"
+            smooth
+            offset={-80}
+            duration={500}
+            spy
+            isDynamic
+            activeClass="active-link"
+          >
+            Journey
           </Link>
         </Nav>
       </Navbar.Collapse>
