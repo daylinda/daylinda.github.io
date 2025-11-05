@@ -24,9 +24,9 @@ function App() {
       <Hero /> 
       <NavBar/>  
       <About/>
-      <Skills/>
+      {/* <Skills/>
        <Projects/>
-      <Journey/>
+      <Journey/> */}
      
 
       

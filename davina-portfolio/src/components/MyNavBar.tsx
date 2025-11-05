@@ -30,7 +30,7 @@ const MyNavBar = () => (
           >
             About
           </Link>
-           <Link
+           {/* <Link
             to="skills"
             className="nav-link"
             smooth
@@ -66,7 +66,7 @@ const MyNavBar = () => (
             activeClass="active-link"
           >
             Journey
-          </Link>
+          </Link> */}
         </Nav>
       </Navbar.Collapse>
     </Container>
