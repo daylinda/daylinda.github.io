@@ -36,7 +36,7 @@ const Skills: React.FC = () => {
         <h2 className="fw-bold mb-4 ">My Skills</h2>
         <div className="row">
           {/* LEFT COLUMN: categories */}
-          <div className="col-md-3 mb-4">
+          <div className="col-md-3 mb-3">
             <ul className="list-group">
               {categories.map((cat) => (
                 <li

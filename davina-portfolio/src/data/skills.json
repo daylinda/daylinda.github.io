@@ -1,66 +1,50 @@
 {
   "skills": {
-    "Software Development": [
+    "Programming": [
       { "name": "C#", "icon": "SiCsharp" },
       { "name": ".NET (Core & Framework)", "icon": "SiDotnet" },
       { "name": "Java", "icon": "SiJava" },
-      { "name": "JavaScript", "icon": "SiJavascript" },
-      { "name": "React", "icon": "SiReact" },
-      { "name": "WPF", "icon": "BiWindows" },
-      { "name": "WCF", "icon": "BiNetworkChart" },
-      { "name": "REST APIs", "icon": "TbApi" },
-      { "name": "MVVM Pattern", "icon": "BsDiagram3" },
-      { "name": "Spring Boot", "icon": "SiSpringboot" },
-      { "name": "XAML", "icon": "AiOutlineCode" }
+      { "name": "Python", "icon": "SiPython" },
+      { "name": "JavaScript", "icon": "SiJavascript" }
     ],
-    "Web & Mobile Development": [
+    "Web & Frontend": [
       { "name": "HTML", "icon": "SiHtml5" },
       { "name": "CSS", "icon": "SiCss3" },
-      { "name": "WordPress", "icon": "SiWordpress" },
-      { "name": "Firebase", "icon": "SiFirebase" },
-      { "name": "Unity", "icon": "SiUnity" },
-      { "name": "React Bootstrap", "icon": "SiBootstrap" },
-      { "name": "Bootstrap Icons", "icon": "BsBootstrapFill" },
-      { "name": "Swagger UI", "icon": "SiSwagger" },
-      { "name": "Android Studio", "icon": "SiAndroidstudio" },
-      { "name": "Firebase Authentication", "icon": "SiFirebase" },
-      { "name": "OTP-based login", "icon": "AiOutlineLock" }
+      { "name": "React", "icon": "SiReact" },
+      { "name": "WordPress", "icon": "SiWordpress" }
+    ],
+    "Backend & APIs": [
+      { "name": "REST APIs", "icon": "TbApi" },
+      { "name": "Microservices", "icon": "CgFolder" },
+      { "name": "Web API", "icon": "TbApi" },
+      { "name": "WCF (legacy)", "icon": "BiNetworkChart" },
+      { "name": "Spring Boot", "icon": "SiSpringboot" }
     ],
     "Automation & Integration": [
       { "name": "UiPath (RPA/APA)", "icon": "SiUipath" },
-      { "name": "SQL", "icon": "SiMysql" },
-      { "name": "Oracle DB", "icon": "SiOracle" },
-      { "name": "Google APIs", "icon": "SiGoogle" },
       { "name": "Node.js", "icon": "SiNodedotjs" },
-      { "name": "Xero Integration", "icon": "SiXero" }
+      { "name": "Google APIs", "icon": "SiGoogle" },
+      { "name": "Xero integration", "icon": "SiXero" }
+    ],
+    "Databases": [
+      { "name": "SQL", "icon": "SiMysql" },
+      { "name": "Oracle", "icon": "SiOracle" },
+      { "name": "Embedded H2", "icon": "BiDatabase" },
+      { "name": "Firebase", "icon": "SiGoogle" }
     ],
     "Cloud & DevOps": [
       { "name": "Google Cloud", "icon": "SiGooglecloud" },
+      { "name": "CI/CD", "icon": "SiGithubactions" },
+      { "name": "GitHub Actions", "icon": "SiGithubactions" },
       { "name": "Jenkins", "icon": "SiJenkins" },
       { "name": "Git", "icon": "SiGit" },
-      { "name": "Jira", "icon": "SiJira" },
-      { "name": "Agile methodologies", "icon": "BsKanban" },
-      { "name": "CI/CD Pipelines", "icon": "SiGithubactions" },
-      { "name": "Kubernetes", "icon": "SiKubernetes" }
+      { "name": "Jira", "icon": "SiJira" }
     ],
-    "Data & Analytics": [
-      { "name": "Python", "icon": "SiPython" },
-      { "name": "Data Mining Techniques", "icon": "BsGraphUp" },
-      { "name": "Correlation Analysis", "icon": "BiStats" },
-      { "name": "Association Rule Mining", "icon": "AiOutlineCluster" },
-      { "name": "Regression Modelling", "icon": "GiChart" },
-      { "name": "K-means Clustering", "icon": "TbBinaryTree" },
-      { "name": "SQL Server", "icon": "SiMicrosoftsqlserver" },
-      { "name": "Postgres", "icon": "SiPostgresql" },
-      { "name": "Embedded H2 Database", "icon": "BiDatabase" }
-    ],
-    "Practices & Collaboration": [
-      { "name": "SOLID Principles", "icon": "BsGear" },
-      { "name": "Agile Scrum", "icon": "SiScrumalliance" },
-      { "name": "Technical Documentation", "icon": "BiBookContent" },
-      { "name": "UI/UX Design", "icon": "MdDesignServices" },
-      { "name": "Cross-functional Collaboration", "icon": "BiGroup" },
-      { "name": "Teaching & Mentoring", "icon": "BsPersonVideo3" }
+    "Methods & Practices": [
+      { "name": "Agile / Scrum", "icon": "SiScrumalliance" },
+      { "name": "Test automation", "icon": "AiOutlineSetting" },
+      { "name": "Code review", "icon": "BiCode" },
+      { "name": "Technical documentation", "icon": "BiBookContent" }
     ]
   }
 }

@@ -30,7 +30,7 @@ const MyNavBar = () => (
           >
             About
           </Link>
-           {/* <Link
+            <Link
             to="skills"
             className="nav-link"
             smooth
@@ -43,7 +43,7 @@ const MyNavBar = () => (
             Skills
           </Link>
           
-          <Link
+         {/*<Link
             to="projects"
             className="nav-link"
             smooth
