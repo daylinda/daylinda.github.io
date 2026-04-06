@@ -13,6 +13,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Journey from './components/Timeline';
+import Footer from './components/Footer';
 
 
 
@@ -25,8 +26,9 @@ function App() {
       <NavBar/>  
       <About/>
       <Skills/>
-       {/* <Projects/>
-      <Journey/> */}
+       <Projects/>
+      <Journey/>
+      <Footer/>
      
 
       

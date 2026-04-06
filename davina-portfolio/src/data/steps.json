@@ -3,48 +3,48 @@
     "id": 1,
     "title": "Bachelor of Computer Engineering",
     "subtitle": "Mumbai University",
-    "period": "2016–2020",
-    "description": "I completed my Bachelor of Computer Engineering, where I built my foundation across both hardware and software, gaining a strong grasp of how systems work end-to-end. Early on, I explored areas like AI and Machine Learning, but I discovered a stronger passion for designing and building front-end applications. This shift shaped my career direction, as I realised I enjoyed creating user-focused solutions that bring ideas to life.",
+    "period": "Aug 2016 – May 2020",
+    "description": "Built a strong foundation across hardware and software systems. Discovered a passion for front-end development and user-focused design early on, which shaped my entire career direction.",
     "side": "left"
   },
   {
     "id": 2,
     "title": "Software Developer",
-    "subtitle": "BNP Paribas",
-    "period": "2020–2023",
-    "description": "I worked as a .NET Software Engineer focused on modernising enterprise CRM systems. I migrated legacy modules from WCF to REST APIs, improving performance, scalability, and integration with downstream systems. My role involved building WPF applications using MVVM, optimising SQL queries for efficiency, and integrating Siebel CRM data through XML and API workflows. Collaborating closely with business analysts in agile sprints, I ensured technical solutions aligned with business needs while supporting CI/CD pipelines with TeamCity, Jenkins, and Git for reliable delivery.",
+    "subtitle": "BNP Paribas · India",
+    "period": "Aug 2020 – Jun 2023",
+    "description": "Built and enhanced CRM modules with WPF/MVVM and C#. Migrated .NET Framework to .NET 6 and WCF services to REST APIs, improving application speed by 40%. Collaborated with business analysts in Agile sprints and facilitated .NET training sessions for the team.",
     "side": "right"
   },
   {
     "id": 3,
     "title": "Masters of Computing",
     "subtitle": "Australian National University",
-    "period": "2023–2025",
-    "description": "Built advanced expertise in software development, automation, data mining, and human–computer interaction. Completed projects in AI-driven learning platforms, tax automation bots, and historical data mining. Developed strong research and problem-solving skills while balancing academic work with part-time industry experience.",
+    "period": "Jul 2023 – Jul 2025",
+    "description": "Advanced expertise across software development, automation, data mining, and human–computer interaction. Projects spanned AI-driven learning platforms, tax automation bots, and historical data mining research.",
     "side": "left"
   },
   {
     "id": 4,
     "title": "Retail Assistant",
     "subtitle": "ShaverShop",
-    "period": "2023–Present",
-    "description": "I worked part-time as a Retail Assistant while completing my studies. The role involved delivering customer service, managing sales, and maintaining store presentation in a busy retail environment. It strengthened my communication, teamwork, and adaptability — qualities highly valued in the Australian workplace — while teaching me to balance professional, academic, and personal commitments effectively.",
+    "period": "2023 – 2025",
+    "description": "Part-time role while studying, building communication, sales, and adaptability skills in a fast-paced retail environment — invaluable for balancing professional and academic commitments.",
     "side": "right"
   },
   {
     "id": 5,
-    "title": "Tutoring",
+    "title": "Tutor",
     "subtitle": "Australian National University",
-    "period": "2023–Present",
-    "description": "As a Tutor at ANU, I supported students, guiding them through programming and software engineering concepts. Having recently been in their position myself, I focused on breaking down complex topics into practical steps and sharing insights from my own industry experience. Tutoring was not just about teaching — it was about helping others like me gain confidence, avoid the struggles I faced, and see how their learning connects to real-world software development.",
+    "period": "2023 – 2025",
+    "description": "Supported students through programming and software engineering concepts, breaking down complex topics into practical steps and sharing real industry experience to help them connect theory to the workplace.",
     "side": "left"
   },
   {
     "id": 6,
     "title": "Software Developer",
-    "subtitle": "Tailored Accounts",
-    "period": "2024–Present",
-    "description": "I began at Tailored Accounts in 2024 as an Automation Intern, where I designed a proof-of-concept tax bot using UiPath to streamline individual returns. Recognising my initiative, the team brought me on as a Software Developer, where I expanded into automation and internal systems — building workflows, integrating .NET/Node.js apps with Xero and Google Cloud, and strengthening IT security processes. This journey from intern to developer reflects my growth in both technical depth and business impact, moving from experimental projects to delivering core systems the company relies on.",
+    "subtitle": "Tailored Accounts · Australia",
+    "period": "Jul 2024 – 2025",
+    "description": "Designed an AI-powered tax document pipeline using Google Gemini and .NET Web API. Fine-tuned Gemini models on domain-specific data. Containerised and deployed APIs to Google Cloud Run via Docker. Built UiPath automation workflows, Xero integrations via Node.js, CI/CD pipelines with GitHub Actions, and an internal Chrome extension for security hygiene.",
     "side": "right"
   }
 ]

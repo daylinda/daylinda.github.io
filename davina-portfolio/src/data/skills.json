@@ -2,39 +2,46 @@
   "skills": {
     "Programming": [
       { "name": "C#", "icon": "SiCsharp" },
-      { "name": ".NET (Core & Framework)", "icon": "SiDotnet" },
-      { "name": "Java", "icon": "SiJava" },
-      { "name": "Python", "icon": "SiPython" },
-      { "name": "JavaScript", "icon": "SiJavascript" }
+      { "name": ".NET Core / Framework", "icon": "SiDotnet" },
+      { "name": ".NET 6 / 8", "icon": "SiDotnet" },
+      { "name": "JavaScript", "icon": "SiJavascript" },
+      { "name": "React", "icon": "SiReact" },
+      { "name": "OOP & SOLID", "icon": "TbStack2" },
+      { "name": "WPF / MVVM", "icon": "MdDesktopWindows" },
+      { "name": "WCF", "icon": "BiNetworkChart" }
     ],
     "Web & Frontend": [
       { "name": "HTML", "icon": "SiHtml5" },
       { "name": "CSS", "icon": "SiCss3" },
       { "name": "React", "icon": "SiReact" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
       { "name": "WordPress", "icon": "SiWordpress" }
     ],
-    "Backend & APIs": [
-      { "name": "REST APIs", "icon": "TbApi" },
-      { "name": "Microservices", "icon": "CgFolder" },
-      { "name": "Web API", "icon": "TbApi" },
-      { "name": "WCF (legacy)", "icon": "BiNetworkChart" },
-      { "name": "Spring Boot", "icon": "SiSpringboot" }
-    ],
-    "Automation & Integration": [
-      { "name": "UiPath (RPA/APA)", "icon": "SiUipath" },
+    "Automation & AI": [
+      { "name": "UiPath RPA / APA", "icon": "SiUipath" },
+      { "name": "AI document processing", "icon": "AiOutlineFileSearch" },
+      { "name": "LLM integration", "icon": "AiOutlineRobot" },
+      { "name": "Google Gemini", "icon": "SiGoogle" },
       { "name": "Node.js", "icon": "SiNodedotjs" },
-      { "name": "Google APIs", "icon": "SiGoogle" },
-      { "name": "Xero integration", "icon": "SiXero" }
+      { "name": "Xero integration", "icon": "SiXero" },
+      { "name": "Google APIs", "icon": "SiGoogle" }
+    ],
+    "Backend & APIs": [
+      { "name": "REST API design", "icon": "TbApi" },
+      { "name": "Microservices", "icon": "BiNetworkChart" },
+      { "name": ".NET Web API", "icon": "TbApi" },
+      { "name": "Spring Boot", "icon": "SiSpringboot" }
     ],
     "Databases": [
       { "name": "SQL", "icon": "SiMysql" },
-      { "name": "Oracle", "icon": "SiOracle" },
-      { "name": "Embedded H2", "icon": "BiDatabase" },
-      { "name": "Firebase", "icon": "SiGoogle" }
+      { "name": "Oracle Database", "icon": "SiOracle" },
+      { "name": "Firebase", "icon": "SiFirebase" },
+      { "name": "Embedded H2", "icon": "BiDatabase" }
     ],
     "Cloud & DevOps": [
       { "name": "Google Cloud", "icon": "SiGooglecloud" },
-      { "name": "CI/CD", "icon": "SiGithubactions" },
+      { "name": "Docker", "icon": "SiDocker" },
+      { "name": "Cloud Run", "icon": "SiGooglecloud" },
       { "name": "GitHub Actions", "icon": "SiGithubactions" },
       { "name": "Jenkins", "icon": "SiJenkins" },
       { "name": "Git", "icon": "SiGit" },
@@ -42,9 +49,10 @@
     ],
     "Methods & Practices": [
       { "name": "Agile / Scrum", "icon": "SiScrumalliance" },
+      { "name": "CI/CD pipelines", "icon": "SiGithubactions" },
       { "name": "Test automation", "icon": "AiOutlineSetting" },
       { "name": "Code review", "icon": "BiCode" },
-      { "name": "Technical documentation", "icon": "BiBookContent" }
+      { "name": "Technical docs", "icon": "BiBookContent" }
     ]
   }
 }

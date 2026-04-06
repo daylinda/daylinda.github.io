@@ -1,9 +1,7 @@
-import GradientText from "./animations/GradientText";
-import { MdOutlineEmojiEmotions } from "react-icons/md";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import stepsRaw from "../data/steps.json";
 import "../css/timeline.css";
-
-import steps from "../data/steps.json";
 
 type Step = {
   id: number;
@@ -11,70 +9,168 @@ type Step = {
   subtitle: string;
   period: string;
   description?: string;
-  side: "left" | "right"; // determines slide-in direction
+  side: "left" | "right";
+};
+
+const steps = stepsRaw as Step[];
+
+type Meta = {
+  tag: string;
+  tagColor: string;
+  stats: { num: string; label: string }[];
+  skills: string[];
+};
+
+const STEP_META: Record<number, Meta> = {
+  1: {
+    tag: "Education",
+    tagColor: "#4079ff",
+    stats: [
+      { num: "4", label: "years" },
+      { num: "8+", label: "subjects" },
+      { num: "1", label: "passion found" },
+    ],
+    skills: ["C", "Java", "Data Structures", "OOP", "Computer Architecture", "Networks"],
+  },
+  2: {
+    tag: "Industry",
+    tagColor: "#8f7db6",
+    stats: [
+      { num: "3", label: "years" },
+      { num: "40%", label: "speed gain" },
+      { num: "WCF→REST", label: "migration" },
+    ],
+    skills: ["C#", ".NET 6", "WPF", "MVVM", "REST APIs", "SQL", "Jenkins", "Git"],
+  },
+  3: {
+    tag: "Education",
+    tagColor: "#4079ff",
+    stats: [
+      { num: "2", label: "years" },
+      { num: "3+", label: "major projects" },
+      { num: "ANU", label: "Canberra" },
+    ],
+    skills: ["Data Mining", "HCI", "AI/ML", "Python", "Research", "System Design"],
+  },
+  4: {
+    tag: "Part-time",
+    tagColor: "#10b981",
+    stats: [
+      { num: "2+", label: "years" },
+      { num: "Customer", label: "facing" },
+      { num: "AU", label: "workplace" },
+    ],
+    skills: ["Customer Service", "Sales", "Teamwork", "Adaptability", "Time Management"],
+  },
+  5: {
+    tag: "Teaching",
+    tagColor: "#f59e0b",
+    stats: [
+      { num: "2+", label: "years" },
+      { num: "100+", label: "students est." },
+      { num: "CS", label: "subject" },
+    ],
+    skills: ["Teaching", "Mentoring", "Communication", "Programming", "Problem Solving"],
+  },
+  6: {
+    tag: "Industry",
+    tagColor: "#8f7db6",
+    stats: [
+      { num: "30%", label: "effort saved" },
+      { num: "Gemini", label: "fine-tuned" },
+      { num: "Docker", label: "deployed" },
+    ],
+    skills: ["C#", ".NET", "UiPath", "Google Gemini", "Docker", "Cloud Run", "Node.js", "Xero", "GitHub Actions"],
+  },
 };
 
 export default function Journey() {
+  const [activeId, setActiveId] = useState(steps[steps.length - 1].id);
+  const active = steps.find((s) => s.id === activeId)!;
+  const meta = STEP_META[activeId];
+
   return (
-    <section id="timeline" className="container py-5">
-      <div className="text-center mb-5 py-3">
-        <h2 className="mb-3 text-4xl font-bold">
-          <GradientText
-            colors={[
-              "#8f7db6",
-              "#4079ff",
-              "#843bf3ff",
-              "#8f7db6",
-              "#4079ff",
-              "#8f7db6",
-            ]}
-            animationSpeed={300}
-          >
-            Every step of the journey has shaped me more than the destination
-            ever could.
-          </GradientText>
-        </h2>
-        <h4 className="text-gray-600 dark:text-gray-300">
-          From classrooms to careers: my journey in motion!{" "}
-          <MdOutlineEmojiEmotions className="inline text-2xl mb-1" />
-        </h4>
-      </div>
-      <div className="container align-items-center">
-        {steps.map((step) => (
-          <motion.div
-            key={step.id}
-            className={`timeline-step mb-3 ${step.side}`}
-            initial={{ opacity: 0, x: step.side === "left" ? -100 : 100 }}
-            exit={step.side}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: step.id * 0.01 }}
-            viewport={{ once: false, amount: 0.2 }}
-            data-aos={step.side === "left" ? "fade-right" : "fade-left"}
-          >
-            <div className="timeline-content shadow-sm p-2 rounded">
-              <div>
-                <div className="row">
-                  <div className="col align-items-center">
-                    <div className="card center">
-                      <div className="card-header text-center fw-bold bg-white">
-                        {step.title}
-                      </div>
-                      <div className="card-body">
-                        <h5 className="card-title">{step.subtitle}</h5>
-                        <p className="card-text">{step.period}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-8">
-                    <div className="description text-justify p-3">
-                      {step.description}
-                    </div>
-                  </div>
-                </div>
+    <section id="timeline" className="container-fluid py-5 my-5 overflow-auto overflow-x-hidden">
+      <div className="container">
+        <h2 className="fw-bold mb-4">My Journey</h2>
+
+        <div className="journey-shell">
+          {/* ── LEFT SPINE ── */}
+          <nav className="journey-spine">
+            {steps.map((step) => {
+              const m = STEP_META[step.id];
+              const isActive = step.id === activeId;
+              return (
+                <button
+                  key={step.id}
+                  className={`spine-item ${isActive ? "active" : ""}`}
+                  onClick={() => setActiveId(step.id)}
+                  style={isActive ? { borderLeftColor: m?.tagColor ?? "#8f7db6" } : {}}
+                >
+                  <span className="spine-year">{step.period}</span>
+                  <span className="spine-title">{step.title}</span>
+                  <span className="spine-org">{step.subtitle}</span>
+                  {m && (
+                    <span
+                      className="spine-tag"
+                      style={{
+                        background: m.tagColor + "22",
+                        color: m.tagColor,
+                      }}
+                    >
+                      {m.tag}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* ── RIGHT DETAIL ── */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeId}
+              className="journey-detail"
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.22 }}
+            >
+              {/* Header */}
+              <div className="detail-head">
+                <span className="detail-period">{active.period}</span>
+                <h3 className="detail-title">{active.title}</h3>
+                <p className="detail-org">{active.subtitle}</p>
               </div>
-            </div>
-          </motion.div>
-        ))}
+
+              {/* Stats */}
+              {meta && (
+                <div className="detail-stats">
+                  {meta.stats.map((st) => (
+                    <div key={st.label} className="detail-stat">
+                      <span className="stat-num">{st.num}</span>
+                      <span className="stat-label">{st.label}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* Description */}
+              {active.description && (
+                <p className="detail-desc">{active.description}</p>
+              )}
+
+              {/* Skills */}
+              {meta && (
+                <div className="detail-skills">
+                  {meta.skills.map((sk) => (
+                    <span key={sk} className="skill-pill">{sk}</span>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

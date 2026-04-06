@@ -1,60 +1,207 @@
-.timeline-content {
-    border-radius:10px !important;
-    border: solid 1px rgb(126, 70, 249);
-    width: 80%;
-    box-shadow: 0 4px 6px rgb(82, 44, 165);
-    transition: transform 0.3s, box-shadow 0.3s;
+#timeline {
+  /* background-color: #1e1e1e; */
 }
 
-.col{
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically */
+/* ── Shell ── */
+.journey-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: 480px;
+  border: 1px solid #3a3a3a;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #242424;
 }
 
-.card{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(186, 176, 207);;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    
-    box-shadow: 0 4px 8px rgb(77, 60, 113);
-}
-
-.card-body {
-    
-    text-align: center;
-    vertical-align: middle;
-}
-
-
-.timeline-step {
+/* ── Spine ── */
+.journey-spine {
   display: flex;
-  justify-content: flex-start; /* default left */
+  flex-direction: column;
+  border-right: 1px solid #3a3a3a;
+  overflow-y: auto;
 }
 
-.timeline-step.right {
-  justify-content: flex-end; /* push to the right */
+.spine-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
 
-.timeline-content {
-  max-width: wrap-content;
+.spine-item:hover {
+  background: #2e2e2e;
 }
 
+.spine-item.active {
+  background: #2e2e2e;
+  /* border-left-color set inline per tagColor */
+}
 
+.spine-year {
+  font-size: 0.68rem;
+  color: #666;
+  font-variant-numeric: tabular-nums;
+}
 
-/* Responsive: stack everything centered on small screens */
-@media (max-width: 768px) {
-  .timeline-step,
-  .timeline-step.right {
-    justify-content: center;
+.spine-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  line-height: 1.3;
+}
+
+.spine-org {
+  font-size: 0.72rem;
+  color: #888;
+}
+
+.spine-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* ── Detail panel ── */
+.journey-detail {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  overflow-y: auto;
+}
+
+.detail-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-period {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.detail-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f1f1f1;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.detail-org {
+  font-size: 0.95rem;
+  color: #8f7db6;
+  margin: 0;
+}
+
+/* ── Stats row ── */
+.detail-stats {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.detail-stat {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 10px;
+  padding: 12px 18px;
+  flex: 1;
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f1f1;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: #777;
+}
+
+/* ── Description ── */
+.detail-desc {
+  font-size: 0.88rem;
+  color: #a8a8a8;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Skill pills ── */
+.detail-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(143, 125, 182, 0.12);
+  border: 1px solid rgba(143, 125, 182, 0.25);
+  color: #8f7db6;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .journey-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
   }
-  .timeline-content {
-    max-width: 100%;
+
+  .journey-spine {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: none;
+    border-bottom: 1px solid #3a3a3a;
   }
 
+  .spine-item {
+    flex-shrink: 0;
+    min-width: 140px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 10px 14px;
+  }
+
+  .spine-item.active {
+    border-bottom-color: #8f7db6;
+    border-left-color: transparent !important;
+  }
+
+  .spine-org,
+  .spine-tag {
+    display: none;
+  }
+
+  .journey-detail {
+    padding: 1.25rem;
+  }
 }
