@@ -1,11 +1,8 @@
 {
   "include": [
-    "davina-portfolio",
     "JourneyThroughFood",
-    
+    "healthApp",
     "RPA-ApplicationProcess",
-    "GroceryPrice-Comparer",
-    
-    "HCI_proj"
+    "BudgetTracker"
   ]
 }

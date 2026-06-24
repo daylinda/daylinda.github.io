@@ -4,7 +4,7 @@
     "title": "Bachelor of Computer Engineering",
     "subtitle": "Mumbai University",
     "period": "Aug 2016 – May 2020",
-    "description": "Built a strong foundation across hardware and software systems. Discovered a passion for front-end development and user-focused design early on, which shaped my entire career direction.",
+    "description": "Built a strong foundation across hardware and software systems. Discovered a passion for software development and user-focused design early on, which shaped my entire career direction.",
     "side": "left"
   },
   {
@@ -12,15 +12,15 @@
     "title": "Software Developer",
     "subtitle": "BNP Paribas · India",
     "period": "Aug 2020 – Jun 2023",
-    "description": "Built and enhanced CRM modules with WPF/MVVM and C#. Migrated .NET Framework to .NET 6 and WCF services to REST APIs, improving application speed by 40%. Collaborated with business analysts in Agile sprints and facilitated .NET training sessions for the team.",
+    "description": "Built and enhanced CRM modules with WPF/MVVM and C#. Led migration from .NET Framework to .NET 6 and WCF to REST APIs — improving performance by 40% with zero unplanned downtime. Worked directly with business analysts in Agile sprints and facilitated internal .NET training sessions.",
     "side": "right"
   },
   {
     "id": 3,
-    "title": "Masters of Computing",
+    "title": "Master of Computing",
     "subtitle": "Australian National University",
-    "period": "Jul 2023 – Jul 2025",
-    "description": "Advanced expertise across software development, automation, data mining, and human–computer interaction. Projects spanned AI-driven learning platforms, tax automation bots, and historical data mining research.",
+    "period": "2023 – 2025",
+    "description": "Advanced expertise across software engineering, automation, data mining, and human–computer interaction. Projects spanned AI-driven platforms, RPA automation bots, and data mining research.",
     "side": "left"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Retail Assistant",
     "subtitle": "ShaverShop",
     "period": "2023 – 2025",
-    "description": "Part-time role while studying, building communication, sales, and adaptability skills in a fast-paced retail environment — invaluable for balancing professional and academic commitments.",
+    "description": "Part-time role while studying full-time, building communication and adaptability skills in a fast-paced environment.",
     "side": "right"
   },
   {
@@ -36,15 +36,15 @@
     "title": "Tutor",
     "subtitle": "Australian National University",
     "period": "2023 – 2025",
-    "description": "Supported students through programming and software engineering concepts, breaking down complex topics into practical steps and sharing real industry experience to help them connect theory to the workplace.",
+    "description": "Supported students through programming and software engineering concepts, bridging theory and real industry experience to help them build practical skills.",
     "side": "left"
   },
   {
     "id": 6,
-    "title": "Software Developer",
+    "title": "Software Engineer",
     "subtitle": "Tailored Accounts · Australia",
-    "period": "Jul 2024 – 2025",
-    "description": "Designed an AI-powered tax document pipeline using Google Gemini and .NET Web API. Fine-tuned Gemini models on domain-specific data. Containerised and deployed APIs to Google Cloud Run via Docker. Built UiPath automation workflows, Xero integrations via Node.js, CI/CD pipelines with GitHub Actions, and an internal Chrome extension for security hygiene.",
+    "period": "Nov 2024 – Present",
+    "description": "Built an unattended UiPath bot delivering live financial reporting across 70+ clients in under 30 minutes. Developed an AI-powered tax document pipeline integrating Google Gemini with a .NET Web API. Reduced manual processing effort by ~30% via UiPath–Xero integration using REFramework and Node.js middleware. Deployed containerised microservices to GCP Cloud Run with GitHub Actions CI/CD, and built an internal Chrome extension for developer workflow automation.",
     "side": "right"
   }
 ]

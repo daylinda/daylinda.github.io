@@ -2,10 +2,13 @@
   "skills": {
     "Programming": [
       { "name": "C#", "icon": "SiCsharp" },
-      { "name": ".NET Core / Framework", "icon": "SiDotnet" },
-      { "name": ".NET 6 / 8", "icon": "SiDotnet" },
+      { "name": ".NET 6 / 8 / 10", "icon": "SiDotnet" },
+      { "name": "ASP.NET Core", "icon": "SiDotnet" },
       { "name": "JavaScript", "icon": "SiJavascript" },
-      { "name": "React", "icon": "SiReact" },
+      { "name": "TypeScript", "icon": "SiTypescript" },
+      { "name": "Python", "icon": "SiPython" },
+      { "name": "PowerShell", "icon": "SiWindows" },
+      { "name": "Bash", "icon": "SiGnubash" },
       { "name": "OOP & SOLID", "icon": "TbStack2" },
       { "name": "WPF / MVVM", "icon": "MdDesktopWindows" },
       { "name": "WCF", "icon": "BiNetworkChart" }
@@ -14,45 +17,73 @@
       { "name": "HTML", "icon": "SiHtml5" },
       { "name": "CSS", "icon": "SiCss3" },
       { "name": "React", "icon": "SiReact" },
-      { "name": "TypeScript", "icon": "SiTypescript" },
-      { "name": "WordPress", "icon": "SiWordpress" }
+      { "name": "React Native", "icon": "SiReact" },
+      { "name": "Node.js", "icon": "SiNodedotjs" },
+      { "name": "Bootstrap", "icon": "SiBootstrap" },
+      { "name": "Expo", "icon": "SiExpo" },
+      { "name": "WordPress", "icon": "SiWordpress" },
+      { "name": "Chrome Extensions", "icon": "SiGooglechrome" }
     ],
     "Automation & AI": [
       { "name": "UiPath RPA / APA", "icon": "SiUipath" },
-      { "name": "AI document processing", "icon": "AiOutlineFileSearch" },
-      { "name": "LLM integration", "icon": "AiOutlineRobot" },
-      { "name": "Google Gemini", "icon": "SiGoogle" },
-      { "name": "Node.js", "icon": "SiNodedotjs" },
-      { "name": "Xero integration", "icon": "SiXero" },
-      { "name": "Google APIs", "icon": "SiGoogle" }
+      { "name": "REFramework", "icon": "AiOutlineRobot" },
+      { "name": "Anthropic API", "icon": "SiAnthropic" },
+      { "name": "Google Gemini", "icon": "SiGooglegemini" },
+      { "name": "Claude Code", "icon": "SiAnthropic" },
+      { "name": "GitHub Copilot", "icon": "SiGithubcopilot" },
+      { "name": "AI Doc Processing", "icon": "AiOutlineFileSearch" },
+      { "name": "Google APIs", "icon": "SiGoogle" },
+      { "name": "Prompt Engineering", "icon": "MdOutlinePsychology" }
     ],
     "Backend & APIs": [
-      { "name": "REST API design", "icon": "TbApi" },
+      { "name": "REST API Design", "icon": "TbApi" },
       { "name": "Microservices", "icon": "BiNetworkChart" },
       { "name": ".NET Web API", "icon": "TbApi" },
+      { "name": "Node.js Middleware", "icon": "SiNodedotjs" },
       { "name": "Spring Boot", "icon": "SiSpringboot" }
     ],
     "Databases": [
       { "name": "SQL", "icon": "SiMysql" },
       { "name": "Oracle Database", "icon": "SiOracle" },
-      { "name": "Firebase", "icon": "SiFirebase" },
+      { "name": "Firebase Realtime DB", "icon": "SiFirebase" },
+      { "name": "Cloud Firestore", "icon": "SiFirebase" },
       { "name": "Embedded H2", "icon": "BiDatabase" }
     ],
-    "Cloud & DevOps": [
-      { "name": "Google Cloud", "icon": "SiGooglecloud" },
+    "Cloud & Infrastructure": [
+      { "name": "GCP Cloud Run", "icon": "SiGooglecloud" },
+      { "name": "Azure", "icon": "SiMicrosoftazure" },
       { "name": "Docker", "icon": "SiDocker" },
-      { "name": "Cloud Run", "icon": "SiGooglecloud" },
       { "name": "GitHub Actions", "icon": "SiGithubactions" },
       { "name": "Jenkins", "icon": "SiJenkins" },
       { "name": "Git", "icon": "SiGit" },
-      { "name": "Jira", "icon": "SiJira" }
+      { "name": "YAML Pipelines", "icon": "SiYaml" }
+    ],
+    "Mobile": [
+      { "name": "React Native", "icon": "SiReact" },
+      { "name": ".NET MAUI", "icon": "SiDotnet" },
+      { "name": "Expo", "icon": "SiExpo" },
+      { "name": "Android / iOS", "icon": "MdPhoneAndroid" }
+    ],
+    "Platforms & Tools": [
+      { "name": "UiPath Orchestrator", "icon": "SiUipath" },
+      { "name": "Looker Studio", "icon": "SiLooker" },
+      { "name": "Google Workspace", "icon": "SiGoogle" },
+      { "name": "Google Apps Script", "icon": "SiGoogle" },
+      { "name": "Xero", "icon": "SiXero" },
+      { "name": "GitHub", "icon": "SiGithub" },
+      { "name": "Jira", "icon": "SiJira" },
+      { "name": "Postman", "icon": "SiPostman" },
+      { "name": "Visual Studio", "icon": "SiVisualstudio" },
+      { "name": "VS Code", "icon": "SiVisualstudiocode" }
     ],
     "Methods & Practices": [
       { "name": "Agile / Scrum", "icon": "SiScrumalliance" },
-      { "name": "CI/CD pipelines", "icon": "SiGithubactions" },
-      { "name": "Test automation", "icon": "AiOutlineSetting" },
-      { "name": "Code review", "icon": "BiCode" },
-      { "name": "Technical docs", "icon": "BiBookContent" }
+      { "name": "CI/CD Pipelines", "icon": "SiGithubactions" },
+      { "name": "TDD", "icon": "AiOutlineSetting" },
+      { "name": "Code Review", "icon": "BiCode" },
+      { "name": "Technical Docs", "icon": "BiBookContent" },
+      { "name": "WCAG Accessibility", "icon": "MdAccessibility" },
+      { "name": "Stakeholder Collab", "icon": "MdOutlinePeople" }
     ]
   }
 }
