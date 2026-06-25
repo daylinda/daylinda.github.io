@@ -68,7 +68,7 @@ const STEP_META: Record<number, Meta> = {
     stats: [
       { num: "2+", label: "years" },
       { num: "100+", label: "students est." },
-      { num: "CS", label: "subject" },
+      { num: "Java, Software engineering & Techlauncher", label: "subject" },
     ],
     skills: ["Teaching", "Mentoring", "Communication", "Programming", "Problem Solving"],
   },
@@ -76,11 +76,11 @@ const STEP_META: Record<number, Meta> = {
     tag: "Industry",
     tagColor: "#8f7db6",
     stats: [
-      { num: "30%", label: "effort saved" },
-      { num: "Gemini", label: "fine-tuned" },
-      { num: "Docker", label: "deployed" },
+      { num: "70+", label: "clients served" },
+      { num: "30%", label: "less manual work" },
+      { num: "3", label: "envs shipped" },
     ],
-    skills: ["C#", ".NET", "UiPath", "Google Gemini", "Docker", "Cloud Run", "Node.js", "Xero", "GitHub Actions"],
+    skills: ["C#", ".NET 8", "ASP.NET Core", "UiPath", "Google Gemini", "Docker", "Cloud Run", "GitHub Actions", "OAuth 2.0", "JWT"],
   },
 };
 

@@ -42,9 +42,9 @@
   {
     "id": 6,
     "title": "Software Engineer",
-    "subtitle": "Tailored Accounts · Australia",
+    "subtitle": "Tailored Accounts · Canberra",
     "period": "Nov 2024 – Present",
-    "description": "Built an unattended UiPath bot delivering live financial reporting across 70+ clients in under 30 minutes. Developed an AI-powered tax document pipeline integrating Google Gemini with a .NET Web API. Reduced manual processing effort by ~30% via UiPath–Xero integration using REFramework and Node.js middleware. Deployed containerised microservices to GCP Cloud Run with GitHub Actions CI/CD, and built an internal Chrome extension for developer workflow automation.",
+    "description": "Led technical architecture and delivery across cloud-native backend services, intelligent automation, and AI-powered platforms. Architected secure .NET 8 REST APIs with ASP.NET Core, OAuth 2.0, JWT, and Google Cloud IAM. Designed an AI-powered OCR and document processing pipeline integrating Google Gemini. Built UiPath automation serving 70+ client organisations, reducing manual processing by ~30%. Deployed containerised services to GCP Cloud Run via Docker and GitHub Actions CI/CD. Mentored an offshore engineering team of two developers.",
     "side": "right"
   }
 ]
