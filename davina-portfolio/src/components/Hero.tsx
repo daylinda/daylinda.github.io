@@ -42,9 +42,11 @@ export default function Hero() {
         <p className="lead text-light">
           Software Engineer
           <br />
-          Web & Desktop Applications Developer
+          .NET Application Developer
           <br/>
-          Automations Designer
+          Automations Designer 
+          <br />
+          Cloud & Integration Engineer
         </p>
        
         <button
